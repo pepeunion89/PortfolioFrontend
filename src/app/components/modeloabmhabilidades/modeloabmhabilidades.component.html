@@ -1,0 +1,34 @@
+<div style="padding: 3rem">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title px-2 mb-2" style="background: lightgoldenrodyellow" id="addHabilidadesModalLabel">{{tituloabm}}</h1>                
+            </div>
+            <div class="modal-body">
+                <form #addHabi="ngForm" (ngSubmit)="onSubmitHabilidades(addHabi)">
+                    <div class="form-group">
+                        <input type="text" ngModel="{{dataHabilidades?.idSkills}}" name="idSkills" hidden id="idSkills">
+                        <label for="nombreSkills">Tecnología</label>
+                        <input type="text" ngModel="{{dataHabilidades?.nombreSkills}}" name="nombreSkills" class="form-control" id="nombreSkills" placeholder="Tecnología" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="porcentajeSkills">Porcentaje</label>
+                        <input type="text" ngModel="{{dataHabilidades?.porcentajeSkills}}" name="porcentajeSkills" class="form-control" id="porcentajeSkills" placeholder="Porcentaje" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="imagenSkills">Imagen url</label>
+                        <input type="text" ngModel="{{dataHabilidades?.imagenSkills}}" name="imagenSkills" class="form-control" id="imagenSkills" placeholder="Url" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="add-skills-form" class="btn btn-primary" (click)="matDialogRef.close()">
+                            Cerrar
+                        </button>
+                        <button [disabled]="addHabi.invalid" type="submit" class="btn btn-success">
+                            Guardar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="contenedor-contenido-efhp d-flex flex-column overflow-hidden">
+    <p class="dialog-titulo-efhp py-3">HABILIDADES</p>
+    <p class="dialog-titulo-efhp segundo py-3">HABILIDADES</p>
+    <hr>
+    <div class="contenedor-boton-añadir">
+        <div class="text-center">
+            <button type="button" class="btn btn-success" (click)="abrirDialogoModeloabm('add')">
+                Añadir habilidad
+            </button>
+        </div>
+    </div>
+    <div class="efhp d-flex flex-wrap justify-content-center my-auto pb-5">
+        <div class="contenedor-general-slider-habilidades">
+            <div class="contenedor-slider-habilidades px-5">
+                <div class="item-slider" *ngFor="let habilidad of listHabilidades">
+                    <img class="animate__animated animate__flipInX" src="{{habilidad.imagenSkills}}" alt="">
+            <!--        <mat-progress-spinner class="spinner-html" value={{habilidad.porcentajeSkills}} [color]="color" [diameter]="70" [strokeWidth]="5" role="progressbar">
+                    </mat-progress-spinner>     -->              
+                    <circle-progress
+                    [percent]='habilidad.porcentajeSkills'
+                    [maxPercent]="100"
+                    [radius]="38"
+                    [titleFontSize]="'29'"
+                    [unitsFontSize]="'27'"
+                    [startFromZero]="true"
+                    [showSubtitle]="false"
+                    [outerStrokeWidth]="9"
+                    [outerStrokeColor]="'#feb958'"
+                    [titleColor]="'#f7f7f7'"
+                    [unitsColor]="'#f7f7f7'"
+                    [showInnerStroke]="false"
+                    [animation]="true"
+                    [animationDuration]="800"
+                  ></circle-progress>
+                    <div class="contenedor-botones-abm mt-2 mb-4">                        
+                        <a class="btn btn-secondary tooltips mt-2 mb-4 mx-2" data-placement="top" data-toggle="tooltip" data-original-title="Edit" (click)="abrirDialogoModeloabm('edit', habilidad)"><i class="fa fa-pencil-square fa-3x"></i></a>
+                        <a class="btn btn-warning tooltips mt-2 mb-4 mx-2" data-placement="top" data-toggle="tooltip" data-original-title="Delete" (click)="deleteHabilidades(habilidad)"><i class="fa fa-times fa-3x"></i></a>
+                    </div>   
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>

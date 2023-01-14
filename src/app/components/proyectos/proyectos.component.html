@@ -1,0 +1,24 @@
+<div class="contenedor-contenido-efhp">
+    <p class="dialog-titulo-efhp py-3">PROYECTOS</p>
+    <p class="dialog-titulo-efhp segundo py-3">PROYECTOS</p>
+    <hr>
+    <div class="contenedor-boton-añadir">
+        <div class="text-center">
+            <button type="button" class="btn btn-success" (click)="abrirDialogoModeloProyectosabm('add')">
+                Añadir proyecto
+            </button>
+        </div>
+    </div>
+    <div class="efhp px-5 d-flex flex-wrap justify-content-center">
+        <div class="proyectos-item" *ngFor="let proyecto of listProyectos">
+            <div class="contenedor-info-proyectos">
+                <img src="{{proyecto.imagenExperiencia}}" alt="" class="info-proyectos">
+            </div>
+            <p class="titulo-proyectos">{{proyecto.descripcionExperiencia}}</p>
+            <div class="contenedor-botones-abm mt-2 mb-4">
+                <a class="btn btn-secondary tooltips mt-2 mb-4 mx-2" data-placement="top" data-toggle="tooltip" data-original-title="Edit" (click)="abrirDialogoModeloProyectosabm('edit', proyecto)"><i class="fa fa-pencil-square fa-3x"></i></a>
+                <a class="btn btn-warning tooltips mt-2 mb-4 mx-2" data-placement="top" data-toggle="tooltip" data-original-title="Delete" (click)="deleteProyecto(proyecto)"><i class="fa fa-times fa-3x"></i></a>
+            </div>  
+        </div>
+     </div>
+</div>

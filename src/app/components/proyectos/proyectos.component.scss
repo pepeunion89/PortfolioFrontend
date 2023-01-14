@@ -1,0 +1,50 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.contenedor-boton-añadir button{
+    width: 250px;
+    height: 50px;
+    font-size: 2rem;
+}
+    
+    .proyectos-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+        min-height: 250px;
+        margin: 40px 20px 0px 20px;
+
+        
+        .contenedor-info-proyectos{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            width: 200px;
+            height: 180px;
+
+            .info-proyectos{
+                width: 100%;
+                height: auto;
+                border: 5px solid rgb(235, 178, 124);
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                -ms-border-radius: 10px;
+                -o-border-radius: 10px;
+}
+                
+        }
+
+        .titulo-proyectos{
+            margin-top: 1rem;
+            font-size: 2rem;
+            line-height: 2.2rem;
+            text-align: center;
+        }
+
+}
+

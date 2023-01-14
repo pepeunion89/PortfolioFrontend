@@ -1,0 +1,38 @@
+<div style="padding: 3rem">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title px-2 mb-2" style="background: lightgoldenrodyellow" id="addProyectoModalLabel">{{tituloabm}}</h1>                
+            </div>
+            <div class="modal-body">
+                <form #addPro="ngForm" (ngSubmit)="onSubmitProyecto(addPro)">
+                    <div class="form-group">
+                        <input type="text" ngModel="{{dataProyectos?.idExperiencia}}" name="idExperiencia" hidden id="idExperiencia">
+                        <label for="descripcionExperiencia">Software desarrollado</label>
+                        <input type="text" ngModel="{{dataProyectos?.descripcionExperiencia}}" name="descripcionExperiencia" class="form-control" id="descripcionExperiencia" placeholder="Software desarrollado" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tituloExperiencia">Proyecto propio de tipo</label>
+                        <input type="text" value="Freelance" name="tituloExperiencia" class="form-control" id="tituloExperiencia" placeholder="Proyecto propio de tipo" disabled required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fechaExperiencia">Año</label>
+                        <input type="text" ngModel="{{dataProyectos?.fechaExperiencia}}" name="fechaExperiencia" class="form-control" id="fechaExperiencia" placeholder="Año" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="imagenExperiencia">Url captura del sistema</label>
+                        <input type="text" ngModel="{{dataProyectos?.imagenExperiencia}}" name="imagenExperiencia" class="form-control" id="imagenExperiencia" placeholder="Url" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="add-experiencia-form" class="btn btn-primary" (click)="matDialogRef.close()">
+                            Cerrar
+                        </button>
+                        <button [disabled]="addPro.invalid" type="submit" class="btn btn-success">
+                            Guardar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

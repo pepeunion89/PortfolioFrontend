@@ -1,0 +1,28 @@
+h1{
+    color: gray
+}
+
+label{
+
+    font-size: 2rem;
+
+}
+
+input{
+    font-size: 2rem;
+
+    &:focus{
+        background-color: rgb(255, 232, 210);
+        color: black;
+    }
+
+}
+
+.modal-footer button{
+
+    width: 100px;
+    font-size: 2rem;
+    line-height: 40px;
+    box-sizing: border-box;
+
+}

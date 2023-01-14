@@ -1,0 +1,34 @@
+<div class="contenedor-contenido-efhp d-flex flex-column justify-content-start">
+    <p class="dialog-titulo-efhp py-3">EXPERIENCIA</p>
+    <p class="dialog-titulo-efhp segundo py-3">EXPERIENCIA</p>
+    <hr>
+    <div class="contenedor-boton-añadir">
+        <div class="text-center">
+            <button type="button" class="btn btn-success" (click)="abrirDialogoModeloExperienciaabm('add')">
+                Añadir experiencia
+            </button>
+        </div>
+    </div>
+    <div class="efhp px-5">
+        <ul>
+            <li *ngFor="let experiencia of listExperiencia">
+                <div class="logo-empresa d-flex">
+                    <div class="recuadro-primero">
+                        <img src="{{experiencia.imagenExperiencia}}" alt="">
+                    </div>
+                    <div class="recuadro-segundo"></div>
+                </div>
+                <div class="experiencia-en-empresa">
+                    <h1>{{experiencia.descripcionExperiencia}}</h1>
+                    <h2>{{experiencia.tituloExperiencia}}</h2>
+                    <div class="contenedor-botones-abm mt-2 mb-4">
+                        <a class="btn btn-secondary tooltips mt-2 mb-4 mx-2" data-placement="top" data-toggle="tooltip" data-original-title="Edit" (click)="abrirDialogoModeloExperienciaabm('edit', experiencia)"><i class="fa fa-pencil-square fa-3x"></i></a>
+                        <a class="btn btn-warning tooltips mt-2 mb-4 mx-2" data-placement="top" data-toggle="tooltip" data-original-title="Delete" (click)="deleteExperiencia(experiencia)"><i class="fa fa-times fa-3x"></i></a>
+                    </div>  
+                    <hr class="w-50 text-white mt-5">
+                </div>
+                
+            </li>
+        </ul>
+    </div>
+</div>

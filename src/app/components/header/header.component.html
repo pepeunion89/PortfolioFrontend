@@ -1,0 +1,38 @@
+<header class="">
+    <div class="container row logo-login row pt-4 pb-2 mx-auto animate__animated animate__fadeInDown">
+        <div class="col-5 col-sm-4 col-md-3 col-lg-2 px-0">
+            <div class="contenedor-logo text-center">
+                <img src="../../../assets/img/APLogo-20-20.png" class="" alt="">
+            </div>
+            <div class="text-center">
+                <hr class="hrLogo mx-auto mt-2 mb-0 text-light">
+                <p class="fs-4 my-0 w-100 mx-auto">#YoProgramo</p>
+            </div>
+        </div>       
+        <div class="contenedor-login pe-0 col-5 col-sm-4 col-md-3 col-lg-4 d-flex align-items-center">
+            <div class="ms-auto"><button type="button" class="btn btn-dark border-0 rounded-2 fs-4" (click)="login()">Conéctate</button></div>
+            
+        </div>
+    </div>   
+    <div class="row col-9 banner-web container-fluid d-flex fs-5 justify-content-center mx-auto animate__animated animate__flipInX">
+        <div class="contenedor-soy-programador col-10 d-flex align-items-center justify-content-center">      
+            <div class="contenedor-full-stack row col-4">
+                <div class="full-stack-developer-jr col pb-3">
+                    <p *ngIf="usuario" class="mi-nombre-banner lh-1 ps-1 my-0">{{usuario.nombre}} {{usuario.apellido}}</p>
+                    <p class="">FULL STACK</p>
+                    <p class="">DEVELOPER</p>
+                    <p class="">JR.</p>
+                </div>
+                <div class="informacion-profesional row m-0">
+                    <p class="p-0 fs-5 lh-sm text-light">{{usuario?.descripcion}}</p>
+                </div>
+                <div class="conoceme-mas">
+                    <a href="https://wa.me/+5493424482111" target="_blank"><button class="col-6 btn btn-dark border-0 py-2 fs-4">¡Contáctame!</button></a>
+                </div>
+            </div>            
+            <div class="contenedor-foto-fondo-color">
+                <div class="contenedor-foto"></div>
+            </div>                            
+        </div>                     
+    </div>            
+</header>

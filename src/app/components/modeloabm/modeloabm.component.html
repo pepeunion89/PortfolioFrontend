@@ -1,0 +1,40 @@
+<!-- Modal para agregar la formacion -->
+<div style="padding: 3rem">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title px-2 mb-2" style="background: lightgoldenrodyellow" id="addFormacionModalLabel">{{tituloabm}}</h1>                
+            </div>
+            <div class="modal-body">
+                <form #addForm="ngForm" (ngSubmit)="onSubmitFormacion(addForm)">
+                    <div class="form-group">
+                        <input type="text" ngModel="{{dataFormacion?.idFormacion}}" name="idFormacion" hidden id="idFormacion">
+                        <label for="titleFor">Titulo</label>
+                        <input type="text" ngModel="{{dataFormacion?.descripcionFormacion}}" name="descripcionFormacion" class="form-control" id="descripcionFormacion" placeholder="Titulo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="empresaFor">Institución</label>
+                        <input type="text" ngModel="{{dataFormacion?.tituloFormacion}}" name="tituloFormacion" class="form-control" id="tituloFormacion" placeholder="Institución" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fechaFor">Año de Graduación</label>
+                        <input type="text" ngModel="{{dataFormacion?.fechaFormacion}}" name="fechaFormacion" class="form-control" id="fechaFormacion" placeholder="Año graduación" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="imagenFor">Imagen url</label>
+                        <input type="text" ngModel="{{dataFormacion?.imagenFormacion}}" name="imagenFormacion" class="form-control" id="imagenFormacion" placeholder="Url" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="add-formacion-form" class="btn btn-primary" (click)="matDialogRef.close()">
+                            Cerrar
+                        </button>
+                        <button [disabled]="addForm.invalid" type="submit" class="btn btn-success">
+                            Guardar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

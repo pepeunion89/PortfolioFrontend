@@ -1,0 +1,65 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.contenedor-iniciar-sesion{
+    width: 330px;
+    height: 500px;
+    background-color: black;
+    margin-top: 150px;
+    box-shadow: 0 0 20PX darkgray;
+    border-radius:15px ;
+    -webkit-border-radius:15px ;
+    -moz-border-radius:15px ;
+    -ms-border-radius:15px ;
+    -o-border-radius:15px ;
+    
+    .titulo{
+        height: 50px;
+        text-align: center;
+        background-color: rgb(196, 100, 10);
+        border-radius:15px 15px 0 0;
+        -webkit-border-radius:15px 15px 0 0;
+        -moz-border-radius:15px 15px 0 0;
+        -ms-border-radius:15px 15px 0 0;
+        -o-border-radius:15px 15px 0 0;
+
+        h3{
+            line-height: 50px;
+        }
+
+    }
+
+    .primer-div{
+        margin-top: -2rem;
+    }
+    
+    .form-label{
+        font-size: 3rem;
+    }
+
+    .form-control{
+        text-indent: 0.5rem;
+        text-shadow: 0 0 2px gray;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .form-text{
+        margin-top: 5px;
+        color: white;
+    }
+
+    button{
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        font-size: 1.7rem;
+        margin-left: auto;
+    }    
+
+}
+

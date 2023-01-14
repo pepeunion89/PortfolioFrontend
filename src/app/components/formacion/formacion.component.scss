@@ -1,0 +1,65 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.formacion-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    min-height: 250px;
+    margin: 0 20px 0px 20px;
+
+    
+    .contenedor-logo-formacion{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 200px;
+        height: 100px;
+
+        .logo-formacion{
+            width: 100%;
+            height: auto;
+        }
+            
+    }
+
+    .titulo-formacion{
+        margin-top: 1rem;
+        font-size: 2rem;
+        line-height: 2.2rem;
+        text-align: center;
+    }
+
+}
+
+.contenedor-botones-abm{
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-botones-abm a{
+    padding: 1px 3px 1px 3px;
+    margin: 3px 0 3px 0;
+}
+
+@media(max-width:630px){
+    .contenedor-botones-abm{
+        flex-direction: row;
+
+        a{
+            margin: 0px 3px 30px 3px;
+        }
+
+    }
+}
+
+.contenedor-boton-añadir button{
+    width: 250px;
+    height: 50px;
+    font-size: 2rem;
+}
