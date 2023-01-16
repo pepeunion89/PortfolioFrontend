@@ -9,7 +9,8 @@ import { Usuario } from '../model/usuario';
 })
 export class HeaderService {
 
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl='https://portfoliobackend-jxmj.onrender.com'
+  //private apiServerUrl=environment.apiBaseUrl;
 
   constructor(private http: HttpClient) {}
 

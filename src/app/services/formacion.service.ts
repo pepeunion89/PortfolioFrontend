@@ -9,7 +9,8 @@ import { Formacion } from '../model/formacion';
 })
 export class FormacionService {
 
-  private apiServerUrl=environment.apiBaseUrl;
+  private apiServerUrl='https://portfoliobackend-jxmj.onrender.com'
+  //private apiServerUrl=environment.apiBaseUrl;
 
   constructor(private http:HttpClient) { }
 
