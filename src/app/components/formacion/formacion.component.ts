@@ -15,12 +15,16 @@ export class FormacionComponent implements OnInit {
   public listFormacion: Formacion[] = [];
   public editFormacion: Formacion | undefined;
  // public deleteFormacion: Formacion | undefined;
+
+ user: any = {};
   
   constructor(private formacionService: FormacionService, private servicio: ServicemanagerService) { }
 
   ngOnInit(): void {
 
     this.getFormacion();
+
+    this.user = JSON.parse(localStorage.getItem("user")!);
 
   }
 

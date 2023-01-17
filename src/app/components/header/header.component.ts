@@ -16,18 +16,29 @@ export class HeaderComponent implements OnInit {
 
   constructor(private headerService: HeaderService, private router: Router) { }
 
-  
+  user: any = {};
+
   ngOnInit(): void {
 
-    this.getUser();
+    this.getUsusario();
+   
+    this.user = JSON.parse(localStorage.getItem("user")!);
+    if(!this.user){
+      location.href = "/";
+    }
 
   }
 
   login(){
-    this.router.navigate(['/login']);
+    location.href ="/login";
   }
 
-  public getUser():void{
+  logout(){
+    localStorage.removeItem("user");
+    location.href = "/";
+  }
+
+  public getUsusario():void{
     this.headerService.getUsuario().subscribe({
       next: (response: Usuario) => {
         this.usuario=response;

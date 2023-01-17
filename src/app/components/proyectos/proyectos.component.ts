@@ -16,11 +16,15 @@ export class ProyectosComponent implements OnInit {
   public listProyectos: Experiencia[] = [];
   public editProyectos: Experiencia | undefined;
 
+  user: any = {};
+
   constructor(private proyectosService: ProyectosService, private servicio: ServicemanagerService) { }
 
   ngOnInit(): void {
 
     this.getProyectos();
+
+    this.user = JSON.parse(localStorage.getItem("user")!);
 
   }
 

@@ -2,7 +2,7 @@
     <p class="dialog-titulo-efhp py-3">FORMACIÓN</p>
     <p class="dialog-titulo-efhp segundo py-3">FORMACIÓN</p>
     <hr>
-    <div class="contenedor-boton-añadir">
+    <div *ngIf="user.rolidrol===1" class="contenedor-boton-añadir">
         <div class="text-center">
             <button type="button" class="btn btn-success" (click)="abrirDialogoModeloabm('add')">
                 Añadir formación
@@ -16,7 +16,7 @@
             </div>
             <p class="titulo-formacion">{{formacion.descripcionFormacion}}</p>
 
-            <div class="contenedor-botones-abm mt-2 mb-4">
+            <div *ngIf="user.rolidrol===1" class="contenedor-botones-abm mt-2 mb-4">
                 <a class="btn btn-secondary tooltips mt-2 mb-4 mx-2" data-placement="top" data-toggle="tooltip" data-original-title="Edit" (click)="abrirDialogoModeloabm('edit', formacion)"><i class="fa fa-pencil-square fa-3x"></i></a>
                 <a class="btn btn-warning tooltips mt-2 mb-4 mx-2" data-placement="top" data-toggle="tooltip" data-original-title="Delete" (click)="deleteFormacion(formacion)"><i class="fa fa-times fa-3x"></i></a>
             </div>    

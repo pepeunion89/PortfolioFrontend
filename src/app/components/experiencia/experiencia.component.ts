@@ -16,11 +16,15 @@ export class ExperienciaComponent implements OnInit {
   public listExperiencia: Experiencia[] = [];
   public editExperiencia: Experiencia | undefined;
 
+  user: any = {};
+
   constructor(private experienciaService: ExperienciaService, private servicio: ServicemanagerService) { }
 
   ngOnInit(): void {
 
     this.getExperiencia();
+
+    this.user = JSON.parse(localStorage.getItem("user")!);
 
   }
 

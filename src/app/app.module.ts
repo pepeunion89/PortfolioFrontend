@@ -23,6 +23,7 @@ import { ModeloabmexperienciaComponent } from './components/modeloabmexperiencia
 import { ModeloabmhabilidadesComponent } from './components/modeloabmhabilidades/modeloabmhabilidades.component';
 import { ModeloabmproyectosComponent } from './components/modeloabmproyectos/modeloabmproyectos.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { SigninComponent } from './components/signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     ModeloabmComponent,
     ModeloabmexperienciaComponent,
     ModeloabmhabilidadesComponent,
-    ModeloabmproyectosComponent
+    ModeloabmproyectosComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,

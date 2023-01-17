@@ -22,17 +22,17 @@ export class HabilidadesComponent implements OnInit {
   modeProgressSpinner: ProgressSpinnerMode = 'determinate';
  // value: number = 0;
 
+  user: any = {};
+
   constructor(private habilidadesService: HabilidadesService, private servicio: ServicemanagerService) { 
     
   }
 
   ngOnInit(): void {
 
-/*    setTimeout(()=>{
-      this.value=50;
-    },100);
-*/
     this.getHabilidades();  
+
+    this.user = JSON.parse(localStorage.getItem("user")!);
 
   }
 

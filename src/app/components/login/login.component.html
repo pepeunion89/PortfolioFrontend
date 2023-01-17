@@ -2,17 +2,23 @@
     <div class="titulo">
         <h3>INICIO DE SESION</h3>
     </div>
-    <form class="d-flex flex-column mx-auto my-auto">        
+    <form (ngSubmit)="login()" id="login" class="d-flex flex-column mx-auto ">        
         <div class="primer-div mb-3">
-            <label for="exampleInputEmail1" class="form-label">CUENTA</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico con nadie.</div>
+            <label for="" class="form-label">Cuenta</label>
+            <input type="email" [(ngModel)]="user.correo" [ngModelOptions]="{standalone: true}" placeholder="Cuenta" class="form-control" required>
+            <div id="" class="form-text">Nunca compartiremos tu correo electrónico con nadie.</div>
         </div>
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <label for="" class="form-label">Contraseña</label>
+            <input type="password" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}" placeholder="Contraseña" class="form-control" required>
         </div>
-        <button type="submit" class="btn btn-secondary">Ingresar</button>
+        <input type="submit" class="boton btn btn-success" value="Ingresar">
     </form>
+    <div *ngIf="errorInicio" class="error mx-auto">
+        <label for="">Cuenta o contraseña incorrectos.</label>
+    </div>
+    <div class="contenedor-registrarse">
+        <label for="">¿No tienes cuenta?<a (click)="crearCuenta()"> Registrate</a></label>   
+    </div>
 </div>
 
