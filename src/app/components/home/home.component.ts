@@ -7,12 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  //user:any = {};
+  user:any = {
+    "correo":"default@default.com",
+    "nombre":"default",
+    "apellido":"default",
+    "fotografia":null,
+    "password":"default",
+    "rolidrol":2
+  };
 
   constructor() { }
 
   ngOnInit(): void {
 
-  }
+      if("user" in localStorage){
+        
+      }else{
+        localStorage.setItem("user", JSON.stringify(this.user));
+      }  
+  }  
+  
 
 }

@@ -9,8 +9,8 @@ import { Experiencia } from '../model/experiencia';
 })
 export class ProyectosService {
 
-  private apiServerUrl='https://portfoliobackend-jxmj.onrender.com'
-  //private apiServerUrl=environment.apiBaseUrl;
+ private apiServerUrl='https://portfoliobackend-jxmj.onrender.com'
+  // private apiServerUrl=environment.apiBaseUrl;
 
   constructor(private http:HttpClient) { }
 

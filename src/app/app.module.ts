@@ -13,7 +13,6 @@ import { HabilidadesComponent } from './components/habilidades/habilidades.compo
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { CdTimerModule } from 'angular-cd-timer';
-import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component' 
@@ -34,7 +33,6 @@ import { SigninComponent } from './components/signin/signin.component';
     FormacionComponent,
     HabilidadesComponent,
     ProyectosComponent,
-    IniciarSesionComponent,
     HomeComponent,
     LoginComponent,
     ModeloabmComponent,

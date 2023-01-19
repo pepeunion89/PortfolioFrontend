@@ -20,6 +20,11 @@ header {
     
     .contenedor-login{
       margin-left: auto;
+
+      @media (max-width:1200px){
+        flex-direction: column;
+      }  
+
     }
     
     .contenedor-login button {

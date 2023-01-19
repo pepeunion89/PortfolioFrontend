@@ -17,15 +17,20 @@ export class HeaderComponent implements OnInit {
   constructor(private headerService: HeaderService, private router: Router) { }
 
   user: any = {};
+  userCerrarSesion: any = {    
+    "correo":"default@default.com",
+    "nombre":"default cerrar sesion",
+    "apellido":"default",
+    "fotografia":null,
+    "password":"default",
+    "rolidrol":2
+  }
 
   ngOnInit(): void {
 
     this.getUsusario();
    
-    this.user = JSON.parse(localStorage.getItem("user")!);
-    if(!this.user){
-      location.href = "/";
-    }
+    this.user = JSON.parse(localStorage.getItem("user")!);   
 
   }
 
@@ -33,9 +38,10 @@ export class HeaderComponent implements OnInit {
     location.href ="/login";
   }
 
-  logout(){
-    localStorage.removeItem("user");
-    location.href = "/";
+  logout(){    
+    localStorage.removeItem("user");    
+    localStorage.setItem("user", JSON.stringify(this.userCerrarSesion));
+    location.href ="/";
   }
 
   public getUsusario():void{

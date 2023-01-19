@@ -9,8 +9,8 @@ import { Habilidades } from '../model/habilidades';
 })
 export class HabilidadesService {
 
-  private apiServerUrl='https://portfoliobackend-jxmj.onrender.com'
-  //private apiServerUrl=environment.apiBaseUrl;
+private apiServerUrl='https://portfoliobackend-jxmj.onrender.com'
+  //  private apiServerUrl=environment.apiBaseUrl;
 
   constructor(private http:HttpClient) { }
 

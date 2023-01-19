@@ -3,17 +3,25 @@
         <h3>CREAR CUENTA</h3>
     </div>
     <form (ngSubmit)="crear()" id="crear" class="d-flex flex-column mx-auto my-auto">        
-        <div class="primer-div mb-3">
+        <div class="primer-div mb-2">
             <label for="" class="form-label">Correo</label>
             <input type="email" [(ngModel)]="user.correo" [ngModelOptions]="{standalone: true}" placeholder="Correo" class="form-control" required>
         </div>
-        <div class="mb-3">
+        <div class="mb-2">
             <label class="form-label">Nombre</label>
             <input type="text" [(ngModel)]="user.nombre" [ngModelOptions]="{standalone: true}" placeholder="Nombre" class="form-control" required>
         </div>
-        <div class="mb-3">
+        <div class="mb-2">
             <label class="form-label">Apellido</label>
             <input type="text" [(ngModel)]="user.apellido" [ngModelOptions]="{standalone: true}" placeholder="Apellido" class="form-control" required>
+        </div>
+        <div class="mb-2">
+            <label class="form-label">Género</label>
+            <select [(ngModel)]="user.genero" [ngModelOptions]="{standalone: true}" class="form-select" style="color:black" required>
+                <option class="opciones" style="color:black"  value="F">Femenino</option>
+                <option class="opciones" style="color:black"  value="M">Masculino</option>
+                <option class="opciones" style="color:black"  value="NB">No Binario</option>
+              </select>
         </div>
         <div class="mb-3">
             <label class="form-label">Contraseña</label>

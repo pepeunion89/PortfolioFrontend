@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
   iniciarSesion(resultado:any){
     if(resultado){
       localStorage.setItem("user", JSON.stringify(resultado));
-      location.href=("/home");
+      location.href=("/");
     }else{
       this.errorInicio = true;
     }
@@ -43,6 +43,7 @@ export class LoginComponent implements OnInit {
       })
     }  
       return this.http.post<any>("https://portfoliobackend-jxmj.onrender.com/user/login", this.user, httpOptions)
+      //return this.http.post<any>("http://localhost:8080/user/login", this.user, httpOptions)
   }
 
   crearCuenta(){

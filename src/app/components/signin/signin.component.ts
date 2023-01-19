@@ -32,6 +32,7 @@ export class SigninComponent implements OnInit {
       })
     }  
       return this.http.post<any>("https://portfoliobackend-jxmj.onrender.com/user/add", this.user, httpOptions)
+      //return this.http.post<any>("http://localhost:8080/user/add", this.user, httpOptions)
   }
 
 

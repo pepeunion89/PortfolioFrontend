@@ -9,10 +9,12 @@
                 <p class="fs-4 my-0 w-100 mx-auto">#YoProgramo</p>
             </div>
         </div>       
-        <div class="contenedor-login pe-0 col-5 col-sm-4 col-md-3 col-lg-4 d-flex align-items-center">
-          <!--  <div class="ms-auto"><button type="button" class="btn btn-dark border-0 rounded-2 fs-4" (click)="login()">Conectate</button></div>-->
-            <div class="ms-auto"><button type="button" class="btn btn-dark border-0 rounded-2 fs-4" (click)="logout()">Cerrar sesión</button></div>
-            
+        <div class="contenedor-login d-flex pe-0 col-6 col-sm-6 col-md-5 col-lg-5 d-flex align-items-center">
+            <div *ngIf="user.correo==='default@default.com'" class="ms-auto"><button type="button" class="btn btn-dark border-0 rounded-2 fs-4" (click)="login()">Conectate</button></div>
+            <div *ngIf="user.genero==='F'" class="ms-auto fs-3 px-2">Bienvenida, {{user.nombre}}</div>
+            <div *ngIf="user.genero==='M'" class="ms-auto fs-3 px-2">Bienvenido, {{user.nombre}}</div>
+            <div *ngIf="user.genero==='NB'" class="ms-auto fs-3 px-2">Bienvenide, {{user.nombre}}</div>
+            <div *ngIf="user.correo!='default@default.com'"class="ms-auto"><button type="button" class="btn btn-dark border-0 rounded-2 fs-4" (click)="logout()">Cerrar sesión</button></div>            
         </div>
     </div>   
     <div class="row col-9 banner-web container-fluid d-flex fs-5 justify-content-center mx-auto animate__animated animate__flipInX">
