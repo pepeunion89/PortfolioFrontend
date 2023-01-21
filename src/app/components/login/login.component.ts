@@ -36,6 +36,7 @@ export class LoginComponent implements OnInit {
       location.href=("/");
     }else{
       this.errorInicio = true;
+      this.dialogRef.close();
     }
   }
 
