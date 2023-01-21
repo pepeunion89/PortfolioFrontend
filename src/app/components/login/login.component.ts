@@ -50,4 +50,8 @@ export class LoginComponent implements OnInit {
     location.href="/signin"
   }
 
+  volver(){
+    location.href=("/");
+  }
+
 }

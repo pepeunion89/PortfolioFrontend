@@ -34,6 +34,7 @@ export class ExperienciaComponent implements OnInit {
       next:(Response: Experiencia[])=>{
         this.listExperienciaYProyectos=Response;
         this.listExperiencia=[];
+        
         for(let experiencia of this.listExperienciaYProyectos){
           if(experiencia.tituloExperiencia!="Freelance"){
             this.listExperiencia.push(experiencia);

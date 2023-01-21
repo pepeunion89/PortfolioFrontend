@@ -32,7 +32,28 @@
         </div>       
     </form>
     <div class="contenedor-registrarse">
-        <label for=""><a (click)="volver()">Volver</a></label>   
+        <label for=""><a (click)="volver()">Volver al Portfolio</a></label>   
     </div>
 </div>
 
+
+<!-- modal OK usuario creado-->
+<button id="abrirUsuarioCreado" [hidden]="true" data-toggle="modal" data-target="#usuarioCreado">Abrir modal</button>
+<div class="modal fade" id="usuarioCreado" role="dialog">
+    <div class="modal-dialog ">
+    
+      <div class="modal-content rounded-3" style="box-shadow: white 0px 0px 20px; margin-top: 20px; margin-left: 20px;">
+        <div class="modal-header" style="background-color: black;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Usuario registrado</h4>
+        </div>
+        <div class="modal-body px-5" style="background-color: rgb(196, 100, 10);">
+          <h1 class="text-center py-3">¡Alta correcta!</h1>
+        </div>
+        <div class="modal-footer" style="background-color: black;">
+          <button type="button" class="btn btn-default" style="color: white;" data-dismiss="modal" (click)="volverLogin()">Volver a Login</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>

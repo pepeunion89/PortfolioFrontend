@@ -17,8 +17,8 @@
     <div *ngIf="errorInicio" class="error mx-auto">
         <label for="">Cuenta o contraseña incorrectos.</label>
     </div>
-    <div class="contenedor-registrarse">
-        <label for="">¿No tienes cuenta?<a (click)="crearCuenta()"> Registrate</a></label>   
+    <div class="contenedor-registrarse d-flex flex-column justify-content-center align-content-center">
+        <label class="text-center" for="">¿No tienes cuenta?<a (click)="crearCuenta()"> Registrate</a></label>
+        <p class="text-center"><a (click)="volver()">Volver al Portfolio</a></p>   
     </div>
 </div>
-

@@ -38,8 +38,8 @@ export class SigninComponent implements OnInit {
 
   confirmar(resultado:any){
     if(resultado){
-      alert("¡Usuario creado exitosamente!");
       this.user = {rolidrol:2};
+      document.getElementById("abrirUsuarioCreado")?.click();
     }else{
       alert("Error al crear usuario.");
     }
@@ -48,6 +48,10 @@ export class SigninComponent implements OnInit {
   
   volver(){
     location.href = ("/");
+  }
+
+  volverLogin(){
+    location.href = ("/login");
   }
 
 }
