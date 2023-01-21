@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
+import { LoadingComponent } from '../loading/loading.component';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-signin',
@@ -10,8 +12,9 @@ import { HttpHeaders } from '@angular/common/http';
 export class SigninComponent implements OnInit {
 
   user: any = {rolidrol:2};
+  public dialogRef: MatDialogRef<LoadingComponent>;
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient, private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -20,6 +23,7 @@ export class SigninComponent implements OnInit {
     let formulario: any = document.getElementById("crear");
     let formularioValido: boolean = formulario.reportValidity();
     if(formularioValido){
+      this.dialogRef = this.dialog.open(LoadingComponent, {panelClass: 'dialog-loading'}); // dialog loading se muestra   
       this.createService().subscribe(
         data=>this.confirmar(data))
     }
@@ -40,6 +44,7 @@ export class SigninComponent implements OnInit {
     if(resultado){
       this.user = {rolidrol:2};
       document.getElementById("abrirUsuarioCreado")?.click();
+      this.dialogRef.close();
     }else{
       alert("Error al crear usuario.");
     }

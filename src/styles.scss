@@ -146,6 +146,19 @@ body {
   -webkit-filter:  progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c3c3c', endColorstr='#242424', GradientType=1 );
   }
 
+  .dialog-loading{
+    background-color: transparent;
+    border: none;
+    align-self: flex-start;
+    justify-self: flex-start;
+
+    .mat-dialog-container {
+      background-color: transparent;
+
+    }
+
+  }
+
 .cdk-overlay-dark-backdrop{
   background: rgba(0, 0, 0, 0.52);
 }

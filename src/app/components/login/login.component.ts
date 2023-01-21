@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
+import { LoadingComponent } from '../loading/loading.component';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-login',
@@ -11,8 +13,9 @@ export class LoginComponent implements OnInit {
 
   errorInicio:boolean = false;
   user:any = {};
+  public dialogRef: MatDialogRef<LoadingComponent>;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -21,6 +24,7 @@ export class LoginComponent implements OnInit {
     let formulario: any = document.getElementById("login");
     let formularioValido: boolean = formulario.reportValidity();
     if(formularioValido){
+      this.dialogRef = this.dialog.open(LoadingComponent, {panelClass: 'dialog-loading'}); // dialog loading se muestra      
       this.loginService().subscribe(
         data=>this.iniciarSesion(data))
     }
