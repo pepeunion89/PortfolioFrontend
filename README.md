@@ -1,27 +1,27 @@
 # PortfolioFrontendAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.4.
+- Este es el repositorio del Portfolio Personal de José Ignacio Canteros.
 
-## Development server
+- En él podrán visualizar todas las Experiencias, Proyectos, Habilidades y Formación.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Para poder utilizar las funciones de CRUD solo se podrá realizar logeandose en modo ADMIN.
 
-## Code scaffolding
+- De momento solo podrá ser editado por el creador del presente contenido, todos los nuevos usuarios que se registren en el sitio podrán solo visualizar el contenido.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+# Servidor
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Este Portfolio fue diseñado en conjunto con Render, donde se alojó el Backend correspondiente.
 
-## Running unit tests
+# ¿Qué funciones incluye?
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Proyecto en Angular.
+- CRUD.
+- Autenticación Login realizado en Springboot.
+- Diseño responsivo con Flexbox.
+- Diseño del sitio utilizando SCSS y BOOTSTRAP.
 
-## Running end-to-end tests
+# Desarrollado por:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+José Ignacio Canteros
+Full Stack Developer Jr.
